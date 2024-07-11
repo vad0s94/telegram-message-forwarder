@@ -1,0 +1,17 @@
+version: '3'
+services:
+  telethon:
+    build: .
+    container_name: my-telethon-container
+    environment:
+      S3_BUCKET: 'my-bucket'
+      S3_KEY: 'my-key'
+      SEARCH_TEXT: 'my-search-text'
+      TELEGRAM_API_ID: '1234567'
+      TELEGRAM_API_HASH: '1234567890abcdef1234567890abcdef'
+      TELEGRAM_PHONE_NUMBER: '+1234567890'
+      TELEGRAM_CHANNEL_ID: '1234567890'
+      TELEGRAM_TARGET_CHANNEL_ID: '1234567890'
+      TELEGRAM_SESSION: 'my-session'
+    volumes:
+      - .:/app
